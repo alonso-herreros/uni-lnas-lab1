@@ -70,7 +70,7 @@ The circuit in the figure 2 shows a well-known and widely used circuit often ref
    > resistors, but it's actually compatible: the voltage at this point is also 0, and no current flows
    > through the second $R$ resistors. All current going through the first $R$ resistor is drained through the
    > input of the ideal Operational Amplifier, which has 0 output impedance, keeping the voltage at $v_o$
-   > equal to $0$. Therefore, the overall circuit gain is $0$.
+   > equal to $0$. Therefore, the overall circuit gain is $0$ at $\omega = \infty$.
 
 2. Assume that the circuit works in sinusoidal steady state and obtain the transfer function defined by the
    following ratio:
