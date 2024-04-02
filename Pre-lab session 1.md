@@ -38,23 +38,23 @@ The circuit in the figure 2 shows a well-known and widely used circuit often ref
    $ω = 0$ and $ω = ∞$. Recall that the impedance of a capacitor depends on the angular frequency $ω$ of the
    signal.
 
-   > We can use the fact that capacitors act as open circuits at $\omega=0$ and as short circuits at $\omega =
-   > \infty$ to estimate the behavior of the circuit at these frequencies. The Operational Amplifier is in a
-   > *voltage buffer* (also known as *voltage follower*) configuration, which has a gain of 1.
+   > We can use the fact that capacitors act as open circuits at $ω = 0$ and as short circuits at $ω = ∞$ to
+   > estimate the behavior of the circuit at these frequencies. The Operational Amplifier is in a *voltage
+   > buffer* (also known as *voltage follower*) configuration, which has a gain of 1.
    >
-   > At $\omega=0$, both capacitors act as **open cirucits**, resulting in the following equivalent circuit:
+   > At $ω = 0$, both capacitors act as **open cirucits**, resulting in the following equivalent circuit:
    >
    > ![alt text](img/fig_1.1.1.1.png)
    >
    > Having an ideal OpAmp, the currents at both input terminals are zero.
    >
    > $$
-   > i_+ = i_- = 0 \implies v_+ = v_g
+   > i_+ = i_- = 0  ⟹  v_+ = v_g
    > $$
    >
-   > From the voltage follower behavior, we can conclude that $v_o(t) = v_g(t)$ when $\omega = 0$
+   > From the voltage follower behavior, we can conclude that $v_o(t) = v_g(t)$ when $ω = 0$
    >
-   > At $\omega=\infty$, both capacitors act as **short circuits**, resulting in the following equivalent
+   > At $ω = ∞$, both capacitors act as **short circuits**, resulting in the following equivalent
    > circuit.
    >
    > ![alt text](img/fig_1.1.1.2.png)
@@ -63,14 +63,14 @@ The circuit in the figure 2 shows a well-known and widely used circuit often ref
    > always be $0$.
    >
    > $$
-   > v_+ = 0 \implies v_o = 0
+   > v_+ = 0 ⟹ v_o = 0
    > $$
    >
    > This might seem contradicting with the same output node being connnected to the point between both $R$
    > resistors, but it's actually compatible: the voltage at this point is also 0, and no current flows
    > through the second $R$ resistor. All current going through the first $R$ resistor is drained through the
    > input of the ideal Operational Amplifier, which has 0 output impedance, keeping the voltage at $v_o$
-   > equal to $0$. Therefore, the overall circuit gain is $0$ at $\omega = \infty$.
+   > equal to $0$. Therefore, the overall circuit gain is $0$ at $ω = ∞$.
 
 2. Assume that the circuit works in sinusoidal steady state and obtain the transfer function defined by the
    following ratio:
@@ -98,8 +98,8 @@ The circuit in the figure 2 shows a well-known and widely used circuit often ref
    $ω$.
 
 6. The datasheet of the operational amplifier to be used specifies that the amplitude of the output current
-   must always be less than 25 mA. If $R_L = 50 \Omega$, what is the maximum value that the input signal
-   amplitude can take in order not to exceed this margin when $ω \approx 0$?
+   must always be less than 25 mA. If $R_L = 50 ω$, what is the maximum value that the input signal
+   amplitude can take in order not to exceed this margin when $ω ≈ 0$?
   
 **NOTE:** It is recommended to check with the simulator the results obtained for a particular election of
 $R$ and $C$
