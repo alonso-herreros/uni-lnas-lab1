@@ -31,8 +31,6 @@ The circuit in the figure 2 shows a well-known and widely used circuit often ref
 ![Sallen-Key Circuit](img/fig2.png "Sallen-Key Circuit")
 <p class="caption"> Figure 2: Sallen-Key Circuit </p>
 
-> [Falstad Circuit Link](https://tinyurl.com/29etbpa6)
-
 1. In view of the circuit, estimate without calculating the transfer function the value of $V_o(ω)/V_g(ω)$ for
    $ω = 0$ and $ω = ∞$. Recall that the impedance of a capacitor depends on the angular frequency $ω$ of the
    signal.
@@ -269,3 +267,8 @@ The circuit in the figure 2 shows a well-known and widely used circuit often ref
   
 **NOTE:** It is recommended to check with the simulator the results obtained for a particular election of
 $R$ and $C$
+
+> [Falstad Circuit Link](https://tinyurl.com/29etbpa6)
+>
+> The results were not completely consistent with the simulation, but the theoretical calculations, formulas
+> and equations were checked against multiple sources.
