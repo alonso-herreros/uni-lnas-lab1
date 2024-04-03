@@ -248,7 +248,7 @@ The circuit in the figure 2 shows a well-known and widely used circuit often ref
     > $$
 
 6. The datasheet of the operational amplifier to be used specifies that the amplitude of the output current
-   must always be less than 25 mA. If $R_L = 50 ω$, what is the maximum value that the input signal
+   must always be less than 25 mA. If $R_L = 50 Ω$, what is the maximum value that the input signal
    amplitude can take in order not to exceed this margin when $ω ≈ 0$?
   
 **NOTE:** It is recommended to check with the simulator the results obtained for a particular election of
