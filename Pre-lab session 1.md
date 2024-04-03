@@ -223,6 +223,17 @@ The circuit in the figure 2 shows a well-known and widely used circuit often ref
     |H(ω)|^2 = \frac{1}{2}
     $$
 
+    > Using the previous result, we can obtain this by solving for $ω$ in the resulting equation:
+    >
+    > $$
+    > \begin{aligned}
+    >     |H(ω)|^2 = \frac{1}{2} &⟺&& \frac{1}{\left(ω^2 C^2 R^2 + 1\right)^2} = \frac{1}{2} &⟹ \\
+    >     &⟹&& ω^2 C^2 R^2 + 1 = \sqrt{2} &⟹ \\
+    >     &⟹&& ω = \sqrt{\frac{\sqrt{2} - 1}{C^2 R^2}}
+    >
+    > \end{aligned}
+    > $$
+
 5. Calculate the current provided by the operational amplifier as a function of $V_g$, $R$, $C$, $R_L$ and
    $ω$.
 
