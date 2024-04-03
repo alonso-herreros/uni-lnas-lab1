@@ -233,7 +233,7 @@ The circuit in the figure 2 shows a well-known and widely used circuit often ref
     > \begin{aligned}
     >     |H(ω)|^2 = \frac{1}{2} &⟺&& \frac{1}{\left(ω^2 C^2 R^2 + 1\right)^2} = \frac{1}{2} &⟹ \\
     >     &⟹&& ω^2 C^2 R^2 + 1 = \sqrt{2} &⟹ \\
-    >     &⟹&& ω = \sqrt{\frac{\sqrt{2} - 1}{C^2 R^2}}
+    >     &⟹&& ω = \frac{\sqrt{\sqrt{2} - 1}}{C R}
     >
     > \end{aligned}
     > $$
