@@ -87,8 +87,8 @@ The circuit in the figure 2 shows a well-known and widely used circuit often ref
     H(ω) = \frac{V_o(ω)}{V_g(ω)}
     $$
 
-    > Using the following equivalent circuit, where $V_+ = (I_1 - I_2) \frac{1}{jω C}$, we can perform mesh
-    > analysis and come up with the following equations
+    > Using the following [equivalent circuit](https://tinyurl.com/224jqvnv "Falstad circuit"), where $V_+ =
+    > (I_1 - I_2) \frac{1}{jω C}$, we can perform mesh analysis and come up with the following equations
     >
     > ![Equivalent Circuit](img/fig_1.1.2.1.drawio.svg)
     >
