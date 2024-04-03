@@ -16,22 +16,24 @@ h1, h2, .supt1, .supt2, .subt1, .subt2 {
     font-variant: small-caps;
 }
 h1 { text-align: center; }
-.supt1, .subt1 {
-    font-size: 1.4em;
-    font-weight: bold;
-}
+
 .subt2, .supt2 { font-size: 1.2em; }
 .subt3, .supt3 { font-size: 1.1em; }
 .supt1 {
     margin-bottom: 0.2em;
+    font-size: 1.5em;
+    font-weight: bold;
 }
 .subt1 {
     margin-bottom: 1em;
+    font-size: 1.7em;
+    font-weight: bold;
+    border-bottom: 1px dashed black;
 }
 
 p { text-align: justify; }
 
-.katex { font-size: 1.1em; }
+.katex { font-size: 1.05em; }
 
 /* #region Inline and fenced code */
 code {
@@ -58,11 +60,11 @@ img {
 blockquote {
     background: var(--vscode-textBlockQuote-background);
     border-color: var(--vscode-textBlockQuote-border);
-    margin: 0;
+    margin: 16px 0;
     padding: 2px 16px 0 10px;
     border-left-width: 5px;
     border-left-style: solid;
-    border-radius: 2px;
+    border-radius: 5px;
 }
 /* #endregion Blockquotes */
 

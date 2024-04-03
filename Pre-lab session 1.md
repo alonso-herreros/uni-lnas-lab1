@@ -1,18 +1,18 @@
 ---
-title: Lab 1 Report
+title: LNAS - Lab 1 S1 Preparatory Homework
 ---
 
 <style>
 :root {
     --markdown-font-family: "Times New Roman", Times, serif;
     --markdown-font-size: 10.5pt;
-    --vscode-textBlockQuote-border: blue;
+    --vscode-textBlockQuote-border: #9599e1;
 }
 </style>
 
 <p class="supt1 center">Linear Networks Analysis and Synthesis</p>
 
-# Lab 1
+# Lab 1 Session 1 - SSS Analysis of a Sallen-Key Circuit
 
 <p class="subt2 center">
 Academic year 2023-2024
@@ -23,7 +23,9 @@ Alonso Herreros Copete
 
 ---
 
-## 1.1 Preparatory Homework
+<h2 class="center">
+Preparatory Homework
+</h2>
 
 The circuit in the figure 2 shows a well-known and widely used circuit often referred to as
 *Sallen-Key*
@@ -71,8 +73,6 @@ The circuit in the figure 2 shows a well-known and widely used circuit often ref
    > through the second $R$ resistor. All current going through the first $R$ resistor is drained through the
    > input of the ideal Operational Amplifier, which has 0 output impedance, keeping the voltage at $v_o$
    > equal to $0$. Therefore, the transfer function is $V_o(ω)/V_g(ω) = 0$ at $ω = ∞$.
-   >
-   > ---
 
 2. Assume that the circuit works in sinusoidal steady state and obtain the transfer function defined by the
    following ratio:
