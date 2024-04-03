@@ -237,6 +237,16 @@ The circuit in the figure 2 shows a well-known and widely used circuit often ref
 5. Calculate the current provided by the operational amplifier as a function of $V_g$, $R$, $C$, $R_L$ and
    $ω$.
 
+    > I will assume that the current *provided* by the Operational Amplifier refers only to the current that
+    > flows through the load resistor $R_L$, and not the the current coming from the top capacitor, which flows
+    > through the output terminal of the OpAmp.
+    >
+    > This output current is the same as the current $I_3$ calculated above:
+    >
+    > $$
+    > I_o\left(V_g, R, C, R_L, ω\right) = I_3 = \frac{V_g}{R_L\left(jωCR + 1\right)^2}
+    > $$
+
 6. The datasheet of the operational amplifier to be used specifies that the amplitude of the output current
    must always be less than 25 mA. If $R_L = 50 ω$, what is the maximum value that the input signal
    amplitude can take in order not to exceed this margin when $ω ≈ 0$?
