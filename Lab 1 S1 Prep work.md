@@ -18,7 +18,8 @@ title: LNAS - Lab 1 S1 Preparatory Homework
 Academic year 2023-2024
 </p>
 <p class="subt2 center">
-Alonso Herreros Copete
+Alonso Herreros Copete</br>
+NIA: 100493990
 </p>
 
 ---
