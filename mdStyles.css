@@ -54,6 +54,18 @@ img {
 }
 /* #endregion Inline and Fenced code */
 
+/* #region Blockquotes */
+blockquote {
+    background: var(--vscode-textBlockQuote-background);
+    border-color: var(--vscode-textBlockQuote-border);
+    margin: 0;
+    padding: 2px 16px 0 10px;
+    border-left-width: 5px;
+    border-left-style: solid;
+    border-radius: 2px;
+}
+/* #endregion Blockquotes */
+
 /* #region Custom classes */
 .center { text-align: center; }
 

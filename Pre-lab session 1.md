@@ -6,6 +6,7 @@ title: Lab 1 Report
 :root {
     --markdown-font-family: "Times New Roman", Times, serif;
     --markdown-font-size: 10.5pt;
+    --vscode-textBlockQuote-border: blue;
 }
 </style>
 
