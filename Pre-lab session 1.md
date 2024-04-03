@@ -202,6 +202,19 @@ The circuit in the figure 2 shows a well-known and widely used circuit often ref
     |H(ω)|^2 = \frac{|V_o(ω)|^2}{|V_g(ω)|^2}
     $$
 
+    > This is a matter of squaring the magnitude of the transfer function obtained above. Using some
+    > properties of the magnitudes of products and quotients, it becomes a simple task:
+    >
+    > $$
+    > \begin{aligned}
+    >     |H(ω)|^2 &= \frac{|V_o(ω)|^2}{|V_g(ω)|^2} \\
+    >     &= \left|\frac{1}{(jωCR + 1)^2}\right|^2 \\
+    >     &= \frac{|1|}{|jωCR + 1|^4} \\
+    >     &= \frac{1}{\left(\sqrt{ω^2 C^2 R^2 + 1}\right)^4} \\
+    >     &= \frac{1}{\left(ω^2 C^2 R^2 + 1\right)^2}
+    > \end{aligned}
+    > $$
+
 4. Determine, as a function of $R$ and $C$, the angular frequency $ω$ in which the amplitude of the output
    signal $v_o(t)$ is 3 dB lower than the amplitude of the input signal $v_g(t)$. That is, to find the angular
    frequency $ω$ that verify
