@@ -35,6 +35,8 @@ The circuit in the figure 2 shows a well-known and widely used circuit often ref
     </figcaption>
 </figure>
 
+> [Falstad Circuit Link](https://tinyurl.com/29etbpa6)
+
 1. In view of the circuit, estimate without calculating the transfer function the value of $V_o(ω)/V_g(ω)$ for
    $ω = 0$ and $ω = ∞$. Recall that the impedance of a capacitor depends on the angular frequency $ω$ of the
    signal.
@@ -84,6 +86,114 @@ The circuit in the figure 2 shows a well-known and widely used circuit often ref
     $$
     H(ω) = \frac{V_o(ω)}{V_g(ω)}
     $$
+
+    > Using the following equivalent circuit, where $V_+ = (I_1 - I_2) \frac{1}{jω C}$, we can perform mesh
+    > analysis and come up with the following equations
+    >
+    > ![Equivalent Circuit](img/fig_1.1.2.1.drawio.svg)
+    >
+    > $$
+    > \begin{aligned}
+    >     V_g &= I_1 \left(2R + \frac{1}{jωC}\right) - I_2 \left(R + \frac{1}{jωC}\right) \\
+    >
+    >     0  = -I_1 \left(R + \frac{1}{jωC}\right) + I_2 \left(R + \frac{2}{jωC}\right) + V_+ ⟹
+    >     0 &= -I_1 (R)                            + I_2 \left(R + \frac{1}{jωC}\right) \\
+    >
+    >     V_+ = I_3 \left(R_L\right) ⟹ 0 &= - I_1 \frac{1}{jω C} + I_2 \frac{1}{jω C} + I_3 (R_L) \\
+    > \end{aligned}
+    > $$
+    >
+    > This can be expressed in matrix form:
+    >
+    > $$
+    > \begin{bmatrix}
+    >     2R + \frac{1}{jωC} & -R - \frac{1}{jωC} & 0 \\
+    >     -R & R + \frac{1}{jωC} & 0 \\
+    >     \frac{-1}{jωC} & \frac{1}{jωC} & R_L
+    > \end{bmatrix}
+    >
+    > \begin{bmatrix}
+    >     I_1 \\
+    >     I_2 \\
+    >     I_3
+    > \end{bmatrix}
+    >
+    > =
+    >
+    > \begin{bmatrix}
+    >     V_g \\
+    >     0 \\
+    >     0
+    > \end{bmatrix}
+    > $$
+    >
+    > We can solve it using Cramer's rule:
+    >
+    > $$
+    > \begin{aligned}
+    > \begin{vmatrix}
+    >     2R + \frac{1}{jωC} & -\left(R + \frac{1}{jωC}\right) & 0 \\
+    >     -R & R + \frac{1}{jωC} & 0 \\
+    >     \frac{-1}{jωC} & \frac{1}{jωC} & R_L
+    > \end{vmatrix}
+    > &= R_L \left(
+    >     \left( 2R + \frac{1}{jωC} \right)\left( R + \frac{1}{jωC} \right) -
+    >     R \left( R + \frac{1}{jωC} \right)
+    > \right) = \\
+    > &= R_L \left( R + \frac{1}{jωC} \right)^2  \\
+    > \end{aligned}
+    > $$
+    >
+    > $$
+    > \begin{aligned}
+    > I_1
+    > &= \frac{
+    >     \begin{vmatrix}
+    >         V_g & -R - \frac{1}{jωC} & 0 \\
+    >         0 & R + \frac{1}{jωC} & 0 \\
+    >         0 & \frac{1}{jωC} & R_L
+    >     \end{vmatrix}
+    > }{
+    >     R_L \left( R + \frac{1}{jωC} \right)^2
+    > }
+    >   = \frac{R_L V_g \left(R+\frac{1}{jωC}\right)}{R_L \left( R + \frac{1}{jωC} \right)^2}
+    > &&= \frac{1}{R + \frac{1}{jωC}} V_g \\
+    >
+    > I_2
+    > &= \frac{
+    >     \begin{vmatrix}
+    >         2R + \frac{1}{jωC} & V_g & 0 \\
+    >         -R & 0 & 0 \\
+    >         \frac{-1}{jωC} & 0 & R_L
+    >     \end{vmatrix}
+    > }{
+    >     R_L \left( R + \frac{1}{jωC} \right)^2
+    > }
+    >   = \frac{R_L V_g R}{R_L \left( R + \frac{1}{jωC} \right)^2}
+    > &&= \frac{R}{\left(R + \frac{1}{jωC}\right)^2} V_g \\
+    >
+    > I_3
+    > &= \frac{
+    >     \begin{vmatrix}
+    >         2R + \frac{1}{jωC} & -\left(R + \frac{1}{jωC}\right) & V_g \\
+    >         -R & R + \frac{1}{jωC} & 0 \\
+    >         \frac{-1}{jωC} & \frac{1}{jωC} & 0
+    >     \end{vmatrix}
+    > }{
+    >     R_L \left( R + \frac{1}{jωC} \right)^2
+    > }
+    >   = \frac{V_g \left(-R + R + \frac{1}{jωC} \right) \frac{1}{jωC}}{R_L \left( R + \frac{1}{jωC} \right)^2}
+    > %   = \left(\frac{\frac{1}{jωC}}{R + \frac{1}{jωC}}\right)^2 \frac{V_g}{R_L}
+    > &&= \frac{1}{R_L\left(jωCR + 1\right)^2} V_g
+    > \end{aligned}
+    > $$
+    >
+    > Finally, we can use the current $I_3$ to obtain the output voltage, and divide by the input voltage to
+    > obtain the transfer function $H(ω)$:
+    >
+    > $$
+    > H(ω) = \frac{V_o(ω)}{V_g(ω)} = \frac{I_3 R_L}{V_g} = \frac{1}{\left(jωCR + 1\right)^2}
+    > $$
 
 3. Find the ratio between the square of the amplitudes of the input $v_g(t)$ and the output $v_o(t)$ for each
    angular frequency $ω$. That is:
