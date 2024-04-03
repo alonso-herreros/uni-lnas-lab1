@@ -28,12 +28,8 @@ Alonso Herreros Copete
 The circuit in the figure 2 shows a well-known and widely used circuit often referred to as
 *Sallen-Key*
 
-<figure> <!-- Sallen-Key Circuit -->
-    <img src="./img/fig2.png" alt="Sallen-Key Circuit">
-    <figcaption>
-        Figure 2: Sallen-Key Circuit
-    </figcaption>
-</figure>
+![Sallen-Key Circuit](img/fig2.png "Sallen-Key Circuit")
+<p class="caption"> Figure 2: Sallen-Key Circuit </p>
 
 > [Falstad Circuit Link](https://tinyurl.com/29etbpa6)
 
