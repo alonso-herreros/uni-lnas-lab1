@@ -250,6 +250,26 @@ The circuit in the figure 2 shows a well-known and widely used circuit often ref
 6. The datasheet of the operational amplifier to be used specifies that the amplitude of the output current
    must always be less than 25 mA. If $R_L = 50 Ω$, what is the maximum value that the input signal
    amplitude can take in order not to exceed this margin when $ω ≈ 0$?
+
+    > The previous consideration about the *output current* will be used. However, it's worth noting that the
+    > amplifier would sustain greater *input* currents at its *output* due to the currents from the capacitor
+    > mentioned above.
+    >
+    > Due to the low frequency, we can simplify the equation for the output current $I_o$ and easily calculate
+    > the maximum input signal amplitude $V_g$ that to prevent exceeding the 25 mA output limit.
+    >
+    > $$
+    > I_o = \frac{V_g}{R_L (\underbrace{jωCR}_{≈0} + 1)^2} ≈ \frac{V_g}{R_L} \\
+    > $$
+    > $$
+    > \begin{aligned}
+    >     \left|I_o\right| < I_{o;max} &⟹&& \left|\frac{V_g}{R_L}\right| < I_{o;max} ⟹ \\
+    >     &⟹&& \left|V_g\right| < R_L I_{o;max} = 50 \text{ Ω} ⋅ 25 \text{ mA} = 1.25 \text{ V}
+    > \end{aligned}
+    > $$
+    >
+    > The input voltage should not exceed $±1.25 \text{ V}$ to comply with the output limits specified in the
+    > datasheet.
   
 **NOTE:** It is recommended to check with the simulator the results obtained for a particular election of
 $R$ and $C$
