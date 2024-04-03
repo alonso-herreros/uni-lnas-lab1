@@ -38,42 +38,42 @@ The circuit in the figure 2 shows a well-known and widely used circuit often ref
    $ω = 0$ and $ω = ∞$. Recall that the impedance of a capacitor depends on the angular frequency $ω$ of the
    signal.
 
-   > We can use the fact that capacitors act as open circuits at $ω = 0$ and as short circuits at $ω = ∞$ to
-   > estimate the behavior of the circuit at these frequencies. The Operational Amplifier is in a *voltage
-   > buffer* (also known as *voltage follower*) configuration, which has a gain of 1.
-   >
-   > At $ω = 0$, both capacitors act as **open cirucits**, resulting in the following equivalent circuit:
-   >
-   > ![alt text](img/fig_1.1.1.1.png)
-   >
-   > Having an ideal OpAmp, the currents at both input terminals are zero.
-   >
-   > $$
-   > i_+ = i_- = 0  ⟹  v_+ = v_g
-   > $$
-   >
-   > From the voltage follower behavior, we can conclude that $v_o(t) = v_g(t)$ when $ω = 0$, so
-   > the transfer function is $V_o(ω)/V_g(ω) = 1$ at $ω = 0$.
-   >
-   > ---
-   >
-   > At $ω = ∞$, both capacitors act as **short circuits**, resulting in the following equivalent
-   > circuit.
-   >
-   > ![alt text](img/fig_1.1.1.2.png)
-   >
-   > Due to the shorting to ground at the positive OpAmp terminal, the input to the *voltage buffer* will
-   > always be $0$.
-   >
-   > $$
-   > v_+ = 0 ⟹ v_o = 0
-   > $$
-   >
-   > This might seem contradicting with the same output node being connnected to the point between both $R$
-   > resistors, but it's actually compatible: the voltage at this point is also 0, and no current flows
-   > through the second $R$ resistor. All current going through the first $R$ resistor is drained through the
-   > input of the ideal Operational Amplifier, which has 0 output impedance, keeping the voltage at $v_o$
-   > equal to $0$. Therefore, the transfer function is $V_o(ω)/V_g(ω) = 0$ at $ω = ∞$.
+    > We can use the fact that capacitors act as open circuits at $ω = 0$ and as short circuits at $ω = ∞$ to
+    > estimate the behavior of the circuit at these frequencies. The Operational Amplifier is in a *voltage
+    > buffer* (also known as *voltage follower*) configuration, which has a gain of 1.
+    >
+    > At $ω = 0$, both capacitors act as **open cirucits**, resulting in the following equivalent circuit:
+    >
+    > ![alt text](img/fig_1.1.1.1.png)
+    >
+    > Having an ideal OpAmp, the currents at both input terminals are zero.
+    >
+    > $$
+    > i_+ = i_- = 0  ⟹  v_+ = v_g
+    > $$
+    >
+    > From the voltage follower behavior, we can conclude that $v_o(t) = v_g(t)$ when $ω = 0$, so
+    > the transfer function is $V_o(ω)/V_g(ω) = 1$ at $ω = 0$.
+    >
+    > ---
+    >
+    > At $ω = ∞$, both capacitors act as **short circuits**, resulting in the following equivalent
+    > circuit.
+    >
+    > ![alt text](img/fig_1.1.1.2.png)
+    >
+    > Due to the shorting to ground at the positive OpAmp terminal, the input to the *voltage buffer* will
+    > always be $0$.
+    >
+    > $$
+    > v_+ = 0 ⟹ v_o = 0
+    > $$
+    >
+    > This might seem contradicting with the same output node being connnected to the point between both $R$
+    > resistors, but it's actually compatible: the voltage at this point is also 0, and no current flows
+    > through the second $R$ resistor. All current going through the first $R$ resistor is drained through the
+    > input of the ideal Operational Amplifier, which has 0 output impedance, keeping the voltage at $v_o$
+    > equal to $0$. Therefore, the transfer function is $V_o(ω)/V_g(ω) = 0$ at $ω = ∞$.
 
 2. Assume that the circuit works in sinusoidal steady state and obtain the transfer function defined by the
    following ratio:
