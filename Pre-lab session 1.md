@@ -81,23 +81,31 @@ The circuit in the figure 2 shows a well-known and widely used circuit often ref
     H(ω) = \frac{V_o(ω)}{V_g(ω)}
     $$
 
-    > Using the following [equivalent circuit](https://tinyurl.com/224jqvnv "Falstad circuit"), where $V_+ =
-    > (I_1 - I_2) \frac{1}{jω C}$, we can perform mesh analysis and come up with the following equations
+    > Using the following [equivalent circuit](https://tinyurl.com/224jqvnv "Falstad circuit"), we can perform
+    > mesh analysis and come up with three mesh equations to solve for the currents $I_1$, $I_2$ and $I_3$.
     >
     > ![Equivalent Circuit](img/fig_1.1.2.1.drawio.svg)
     >
     > $$
     > \begin{aligned}
     >     V_g &= I_1 \left(2R + \frac{1}{jωC}\right) - I_2 \left(R + \frac{1}{jωC}\right) \\
-    >
-    >     0  = -I_1 \left(R + \frac{1}{jωC}\right) + I_2 \left(R + \frac{2}{jωC}\right) + V_+ ⟹
-    >     0 &= -I_1 (R)                            + I_2 \left(R + \frac{1}{jωC}\right) \\
-    >
-    >     V_+ = I_3 \left(R_L\right) ⟹ 0 &= - I_1 \frac{1}{jω C} + I_2 \frac{1}{jω C} + I_3 (R_L) \\
+    >     0   &= -I_1 \left(R + \frac{1}{jωC}\right) + I_2 \left(R + \frac{2}{jωC}\right) + V_+ \\
+    >     V_+ &= I_3 \left(R_L\right) \\
     > \end{aligned}
     > $$
     >
-    > This can be expressed in matrix form:
+    >
+    > Using the substitution $V_+ = (I_1 - I_2) \frac{1}{jω C}$, we can rewrite the equations as:
+    >
+    > $$
+    > \begin{aligned}
+    >     V_g &= I_1 \left(2R + \frac{1}{jωC}\right) - I_2 \left(R + \frac{1}{jωC}\right) \\
+    >     0   &= -I_1 (R)                            + I_2 \left(R + \frac{1}{jωC}\right) \\
+    >     0   &= -I_1 \frac{1}{jω C} + I_2 \frac{1}{jω C} + I_3 (R_L) \\
+    > \end{aligned}
+    > $$
+    >
+    > This can then be expressed in matrix form:
     >
     > $$
     > \begin{bmatrix}
@@ -125,60 +133,61 @@ The circuit in the figure 2 shows a well-known and widely used circuit often ref
     >
     > $$
     > \begin{aligned}
+    > \det(A) &=
     > \begin{vmatrix}
     >     2R + \frac{1}{jωC} & -\left(R + \frac{1}{jωC}\right) & 0 \\
     >     -R & R + \frac{1}{jωC} & 0 \\
     >     \frac{-1}{jωC} & \frac{1}{jωC} & R_L
-    > \end{vmatrix}
+    > \end{vmatrix} \\
     > &= R_L \left(
     >     \left( 2R + \frac{1}{jωC} \right)\left( R + \frac{1}{jωC} \right) -
     >     R \left( R + \frac{1}{jωC} \right)
-    > \right) = \\
+    > \right) \\
     > &= R_L \left( R + \frac{1}{jωC} \right)^2  \\
     > \end{aligned}
     > $$
     >
     > $$
-    > \begin{aligned}
     > I_1
-    > &= \frac{
+    > = \frac{
     >     \begin{vmatrix}
     >         V_g & -R - \frac{1}{jωC} & 0 \\
     >         0 & R + \frac{1}{jωC} & 0 \\
     >         0 & \frac{1}{jωC} & R_L
     >     \end{vmatrix}
     > }{
-    >     R_L \left( R + \frac{1}{jωC} \right)^2
+    >     \det(A)
     > }
     >   = \frac{R_L V_g \left(R+\frac{1}{jωC}\right)}{R_L \left( R + \frac{1}{jωC} \right)^2}
-    > &&= \frac{1}{R + \frac{1}{jωC}} V_g \\
+    > = \frac{1}{R + \frac{1}{jωC}} V_g \\
     >
     > I_2
-    > &= \frac{
+    > = \frac{
     >     \begin{vmatrix}
     >         2R + \frac{1}{jωC} & V_g & 0 \\
     >         -R & 0 & 0 \\
     >         \frac{-1}{jωC} & 0 & R_L
     >     \end{vmatrix}
     > }{
-    >     R_L \left( R + \frac{1}{jωC} \right)^2
+    >     \det(A)
     > }
     >   = \frac{R_L V_g R}{R_L \left( R + \frac{1}{jωC} \right)^2}
-    > &&= \frac{R}{\left(R + \frac{1}{jωC}\right)^2} V_g \\
+    > = \frac{R}{\left(R + \frac{1}{jωC}\right)^2} V_g \\
     >
+    > \begin{aligned}
     > I_3
-    > &= \frac{
+    > = \frac{
     >     \begin{vmatrix}
     >         2R + \frac{1}{jωC} & -\left(R + \frac{1}{jωC}\right) & V_g \\
     >         -R & R + \frac{1}{jωC} & 0 \\
     >         \frac{-1}{jωC} & \frac{1}{jωC} & 0
     >     \end{vmatrix}
     > }{
-    >     R_L \left( R + \frac{1}{jωC} \right)^2
+    >     \det(A)
     > }
-    >   = \frac{V_g \left(-R + R + \frac{1}{jωC} \right) \frac{1}{jωC}}{R_L \left( R + \frac{1}{jωC} \right)^2}
+    >   &= \frac{V_g \left(-R +R +\frac{1}{jωC}\right) \frac{1}{jωC}}{R_L \left(R +\frac{1}{jωC}\right)^2} \\
     > %   = \left(\frac{\frac{1}{jωC}}{R + \frac{1}{jωC}}\right)^2 \frac{V_g}{R_L}
-    > &&= \frac{1}{R_L\left(jωCR + 1\right)^2} V_g
+    > &= \frac{1}{R_L\left(jωCR + 1\right)^2} V_g
     > \end{aligned}
     > $$
     >
