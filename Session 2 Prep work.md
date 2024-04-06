@@ -38,6 +38,19 @@ Consider that the switch in figure 3 has been open for a long time, and that the
 an instant we define as $t = 0$. Determine
 
 * (a) $I_L(s)$: current through the coil in the Laplace domain for $t > 0$.
+
+    > As the intial state is in reset, the equivalent cirucit in the Laplace domain doesn't require any
+    > additional sources.
+    >
+    > ![Equivalent circuit in Laplace domain](img/fig_2.1.1.drawio.svg)
+    >
+    > The equation describing the circuit in Laplace domain for $t>0$ can be found using one mesh and Ohm's
+    > law, directly relating the current through the coil $I_L(s)$ with the voltage source $V_g(s)$:
+    >
+    > $$
+    > I_L(s) = \frac{V_g(s)}{2R_g + sL}
+    > $$
+
 * (b) $I_s$: stationary value of the current reached after a long time $(t → ∞)$.
 * (c) $i_L(t)$: current through the coil in the time domain for $t > 0$.
 * (d) If the relay is triggered when the current flowing through the coil is 80 % of the final value $I_s$,
