@@ -52,6 +52,17 @@ an instant we define as $t = 0$. Determine
     > $$
 
 * (b) $I_s$: stationary value of the current reached after a long time $(t → ∞)$.
+
+    > With a DC source, the angular frequency $ω$ is 0. Taking a constant input voltage $V_g(s) = V_g$ and $s
+    > = jω = 0$ > 0$
+    >
+    > $$
+    > I_s = \frac{V_g}{2R_g +0L} = \frac{V_g}{2R_g}
+    > $$
+    >
+    > This means after a long enough time, the current is stabilized and the inductor behaves as a short
+    > circuit.
+
 * (c) $i_L(t)$: current through the coil in the time domain for $t > 0$.
 * (d) If the relay is triggered when the current flowing through the coil is 80 % of the final value $I_s$,
   how long does it take for the relay to trigger from the time the microcontroller activates it (switch is
