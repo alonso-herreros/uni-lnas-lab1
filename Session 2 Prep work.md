@@ -56,15 +56,19 @@ an instant we define as $t = 0$. Determine
 
 * (b) $I_s$: stationary value of the current reached after a long time $(t → ∞)$.
 
-    > With a DC source, the angular frequency $ω$ is 0. Taking a constant input voltage $V_g(s) = V_g$ and $s
-    > = jω = 0$ > 0$
+    > Taking a constant input voltage $V_g(s) = V_g$ and applying the final value theorem:
     >
     > $$
-    > I_s = \frac{V_g}{2R_g +0L} = \frac{V_g}{2R_g}
+    > \begin{aligned}
+    >     I_s &= \lim_{t → ∞} i_L(t) = \lim_{s → 0} sI_L(s) \\
+    >     &= \lim_{s → 0} s \frac{V_g}{s(R + R_g + sL)} \\
+    >     &= \frac{V_g}{R + R_g} \\
+    >     &= 120 \text{ mA}
+    > \end{aligned}
     > $$
     >
     > This means after a long enough time, the current is stabilized and the inductor behaves as a short
-    > circuit.
+    > circuit, leaving only the two resistors contributing with their impedance.
 
 * (c) $i_L(t)$: current through the coil in the time domain for $t > 0$.
 * (d) If the relay is triggered when the current flowing through the coil is 80 % of the final value $I_s$,
