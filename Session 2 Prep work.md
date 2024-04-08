@@ -71,6 +71,44 @@ an instant we define as $t = 0$. Determine
     > circuit, leaving only the two resistors contributing with their impedance.
 
 * (c) $i_L(t)$: current through the coil in the time domain for $t > 0$.
+
+    > We can find the time domain expression for the current through the coil by taking the inverse Laplace of
+    > the expression found in the first question. First, we'll use Partial Fraction Decomposition to simplify
+    > the expression.
+    >
+    > $$
+    > I_L(s) = \frac{V_g}{s(R + R_g + sL)} = \frac{A}{s} + \frac{B}{(R + R_g + sL)}\\
+    > $$
+    >
+    > Where
+    >
+    > $$
+    > \begin{aligned}
+    >     A &= \lim_{s→ 0} s \frac{V_g}{s(R + R_g + sL)} &&= \frac{V_g}{R + R_g} \\
+    >     B &= \lim_{s→ -\frac{R+R_g}{L}} \frac{(R + R_g + sL) V_g}{s(R + R_g + sL)} &&= -\frac{LV_g}{R + R_g}
+    > \end{aligned}
+    > $$
+    >
+    > Leaving us with this expression.
+    >
+    > $$
+    > I_L(s) = \frac{V_g}{s(R + R_g)} - \frac{L V_g}{(R + R_g + sL)(R + R_g)} \\
+    > $$
+    >
+    > Then, we can adjust the expression to a suitable form and use the inverse Laplace transform of these
+    > terms to find the time domain expression for the current.
+    >
+    > $$
+    > \begin{aligned}
+    >     i_L(t) &= \mathcal{L}^{-1}\left\{I_L(s)\right\} \\
+    >     &= \mathcal{L}^{-1}\left\{\frac{V_g}{s(R + R_g)} - \frac{L V_g}{(R + R_g + sL)(R + R_g)}\right\} \\
+    >     &= \frac{V_g}{R + R_g} \left( \mathcal{L}^{-1} \left\{\frac{1}{s}\right\}
+    >         - \mathcal{L}^{-1} \left\{\frac{1}{(\frac{R + R_g}{L} + s)}\right\} \right) \\
+    >     &= \frac{V_g}{R + R_g} \left( 1 - e^{-\frac{R + R_g}{L} t} \right) \\
+    >     &= 120 \left( 1 - e^{-100 t} \right) \text{ [mA]}
+    > \end{aligned}
+    > $$
+
 * (d) If the relay is triggered when the current flowing through the coil is 80 % of the final value $I_s$,
   how long does it take for the relay to trigger from the time the microcontroller activates it (switch is
   closed)?
