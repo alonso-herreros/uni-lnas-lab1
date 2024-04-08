@@ -48,7 +48,10 @@ an instant we define as $t = 0$. Determine
     > $V_L(s) = sL I_L(s)$ and $V_g(s) = \mathcal{L}\left\{V_g\right\} = \frac{V_g}{s}$
     >
     > $$
-    > I_L(s) = \frac{V_g(s)}{R + R_g + sL} = \frac{V_g}{s(R + R_g + sL)}
+    > \begin{aligned}
+    >     I_L(s) &= \frac{V_g(s)}{R + R_g + sL} = \frac{V_g}{s(R + R_g + sL)} \\
+    >     &= \frac{12}{100s + s^2} \text{ [A]}
+    > \end{aligned}
     > $$
 
 * (b) $I_s$: stationary value of the current reached after a long time $(t → ∞)$.
