@@ -44,11 +44,11 @@ an instant we define as $t = 0$. Determine
     >
     > ![Equivalent circuit in Laplace domain](img/fig_2.1.1.drawio.svg)
     >
-    > The equation describing the circuit in Laplace domain for $t>0$ can be found using one mesh and Ohm's
-    > law, directly relating the current through the coil $I_L(s)$ with the voltage source $V_g(s)$:
+    > The equation describing the circuit in Laplace domain for $t>0$ can be found using mesh analysis, where
+    > $V_L(s) = sL I_L(s)$ and $V_g(s) = \mathcal{L}\left\{V_g\right\} = \frac{V_g}{s}$
     >
     > $$
-    > I_L(s) = \frac{V_g(s)}{2R_g + sL}
+    > I_L(s) = \frac{V_g(s)}{R + R_g + sL} = \frac{V_g}{s(R + R_g + sL)}
     > $$
 
 * (b) $I_s$: stationary value of the current reached after a long time $(t → ∞)$.
