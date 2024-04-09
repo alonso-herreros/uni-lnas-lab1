@@ -112,6 +112,24 @@ an instant we define as $t = 0$. Determine
 * (d) If the relay is triggered when the current flowing through the coil is 80 % of the final value $I_s$,
   how long does it take for the relay to trigger from the time the microcontroller activates it (switch is
   closed)?
+  
+    > This is a matter of finding the time $t_{80}$ that it takes for the current $i_L$ to reach $0.8 I_s$ in a the
+    > studied scenario (switch is closed at $t = 0$). We can use the equations found in the preivous questions for
+    > this.
+    >
+    > $$
+    > \begin{aligned}
+    >     && i_L(t_{80}) &= 0.8 I_s &⟹ \\
+    >     &⟹& \frac{V_g}{R + R_g} \left( 1 - e^{-\frac{R + R_g}{L} t_{80}} \right) &= 0.8 \frac{V_g}{R + R_g} &⟹ \\
+    >     &⟹& e^{-\frac{R+R_g}{L} t_{80}} &= 1 - 0.8 &⟹ \\
+    >     &⟹& -\frac{R + R_g}{L} t_{80} &= \ln(0.2) &⟹ \\
+    >     &⟹& t_{80} &= -\frac{L}{R + R_g} \ln(0.2) \\
+    >     &&&= - \frac{1}{50+50} \ln(0.2) \\
+    >     &&&= 16.09 ⋅ 10^{-3} \text{ [s]} \\
+    > \end{aligned}
+    > $$
+    >
+    > It would take the relay 16.09 ms to trigger in this scenario.
 
 ### Question 2
 
