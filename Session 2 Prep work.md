@@ -32,6 +32,12 @@ In this exercise we study the transient effect of the activation and deactivatio
 in a relay. Let’s think of a microcontroller that activates/deactivates this relay by means of one
 of its output pins, as shown in Figure 3.
 
+![Microcontroller activates the relay at t=0](img/fig3.png)
+
+<p class="caption center">
+Figure 3: Microcontroller activates the relay at t = 0.
+</p>
+
 ### Question 1
 
 Consider that the switch in figure 3 has been open for a long time, and that the micro-controller closes it at
@@ -188,12 +194,6 @@ has been closed for a long time before opening it at instant $t = 0$, determine:
 * (b) $V_o(s)$: voltage on the microcontroller output pin in the Laplace domain for $t > 0$.
 * (c) $v_o(0+)$: voltage to be supported by the output pin of the microcontroller at $t = 0^+$. Has the
   problem discussed in section 2 been solved?
-
-![Microcontroller activates the relay at t=0](img/fig3.png)
-
-<p class="caption center">
-Figure 3: Microcontroller activates the relay at t = 0.
-</p>
 
 ![alt text](img/fig4.png)
 
