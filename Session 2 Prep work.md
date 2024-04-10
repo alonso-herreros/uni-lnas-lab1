@@ -190,6 +190,12 @@ To avoid the possible problems mentioned in the previous point, a capacitor is c
 in parallel with the relay. $C_p = 200 μF$, as shown in figure 4. Assuming that the switch
 has been closed for a long time before opening it at instant $t = 0$, determine:
 
+![alt text](img/fig4.png)
+
+<p class="caption center">
+Figure 4: Microcontroller deactivates the relay at t = 0.
+</p>
+
 * (a) $I_L(s)$: current through the coil in the Laplace domain for $t > 0$.
 
     > The first step is to find our new stable *on* state taking the capacitor into account.
@@ -247,12 +253,6 @@ has been closed for a long time before opening it at instant $t = 0$, determine:
 
 * (c) $v_o(0+)$: voltage to be supported by the output pin of the microcontroller at $t = 0^+$. Has the
   problem discussed in section 2 been solved?
-
-![alt text](img/fig4.png)
-
-<p class="caption center">
-Figure 4: Microcontroller deactivates the relay at t = 0.
-</p>
 
 * (d) In view of the equation for the current flowing in the coil, what can be concluded about its behavior?
   What would you change in the circuit to avoid this effect?
