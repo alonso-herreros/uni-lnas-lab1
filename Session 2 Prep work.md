@@ -118,7 +118,7 @@ an instant we define as $t = 0$. Determine
 * (d) If the relay is triggered when the current flowing through the coil is 80 % of the final value $I_s$,
   how long does it take for the relay to trigger from the time the microcontroller activates it (switch is
   closed)?
-  
+
     > This is a matter of finding the time $t_{80}$ that it takes for the current $i_L$ to reach $0.8 I_s$ in a the
     > studied scenario (switch is closed at $t = 0$). We can use the equations found in the preivous questions for
     > this.
@@ -285,3 +285,30 @@ Figure 4: Microcontroller deactivates the relay at t = 0.
 
 * (d) In view of the equation for the current flowing in the coil, what can be concluded about its behavior?
   What would you change in the circuit to avoid this effect?
+
+    > After analyzing the poles and zeros of the transient response (second-order), the system seems to be
+    > underdamped, as both poles fall in the left half-plane, with negative real parts and non-zero imaginary
+    > parts.
+    >
+    > The response is faster than that of a critically damped system, and the overshoot is not too dramatic on
+    > the turning-on curve, so there is no risk of damaging the relay. The turn-off curve has a more
+    > significant overshoot, but it may not be a problem either.
+    >
+    > In order to change this to a critically damped system with no overshoot at all, both poles must be
+    > equal, real, and negative. This can be achieved without modifying the maximum current by adjusting the
+    > capacitor value, which is present in the polynomial of the denominator of the transient reponse.
+    >
+    > $$
+    > I_L(s) = \frac{v_C(0^-) + sLi_L(0^-)}{C_p^{-1} + sR + s^2L} \\
+    > $$
+    >
+    > In the second-degree polynomial of the denominator to make the discriminant ($B^2 - 4AC$) in the quadratic equation equal to
+    > zero.
+    >
+    > $$
+    > R^2 - 4 L C_p^{-1} = 0 ⟺ C_p = \frac{4L}{R^2} = 1.6 \text{ mF}
+    > $$
+    >
+    > However, this would require a big capacitor, and the response speed would be much lower than the one studied in these previous questions.
+    >
+    > ---
