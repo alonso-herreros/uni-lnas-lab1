@@ -310,5 +310,3 @@ Figure 4: Microcontroller deactivates the relay at t = 0.
     > $$
     >
     > However, this would require a big capacitor, and the response speed would be much lower than the one studied in these previous questions.
-    >
-    > ---
