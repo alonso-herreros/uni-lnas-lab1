@@ -191,6 +191,46 @@ in parallel with the relay. $C_p = 200 μF$, as shown in figure 4. Assuming that
 has been closed for a long time before opening it at instant $t = 0$, determine:
 
 * (a) $I_L(s)$: current through the coil in the Laplace domain for $t > 0$.
+
+    > The first step is to find our new stable *on* state taking the capacitor into account.
+    >
+    > Since the circuit is charged with DC for a long time ($ω = 0$) the **capacitor behaves as an open
+    > circuit.**
+    >
+    > $$
+    > i_C(0^-) = 0
+    > $$
+    >
+    > Therefore, the current through the coil after a long time activated **is the same** as $I_s$ in the
+    > previous sections.
+    >
+    > $$
+    > i_L(0^-) = \frac{V_g}{R + R_g} = 120 \text{ mA}
+    > $$
+    >
+    > Now, we'll find the condition of the capacitor after a long time, $v_C(0^-)$. This can be found by using
+    > the previous stable currents.
+    >
+    > $$
+    > v_C(0^-) = V_g - I_g R_g = V_g - (i_L(0^-)-i_C(0^-)) R_g = 6 \text{ V}
+    > $$
+    >
+    > With this, we can create a new equivalent circuit in the Laplace domain, taking into account the
+    > capacitor and using voltage sources as initial conditions in order to make mesh analysis easier.
+    >
+    > ![Equivalent circuit in Laplace domain](img/fig_2.1.3.1.drawio.svg)
+    >
+    > With this, we can analyze the circuit using KVL and obtain the expression for $I_L(s)$ for $t > 0$.
+    >
+    > $$
+    > \begin{aligned}
+    >     && \frac{v_C(0^-)}{s} + Li_L(0^-) &= I_L(s) \left(\frac{1}{sC_p} + sL + R\right) &⟹\\
+    >     &⟹& I_L(s) &= \frac{\frac{v_C(0^-)}{s} + Li_L(0^-)}{\frac{1}{sC_p} + sL + R} \\
+    >     &&&= \frac{v_C(0^-) + sLi_L(0^-)}{C_p^{-1} + sR + s^2L} \\
+    >     &&&= \frac{6 + 0.12s}{5000 + 50s + s^2} \text{ [A]} \\
+    > \end{aligned}
+    > $$
+
 * (b) $V_o(s)$: voltage on the microcontroller output pin in the Laplace domain for $t > 0$.
 * (c) $v_o(0+)$: voltage to be supported by the output pin of the microcontroller at $t = 0^+$. Has the
   problem discussed in section 2 been solved?
