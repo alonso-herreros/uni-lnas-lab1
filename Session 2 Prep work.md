@@ -254,5 +254,24 @@ Figure 4: Microcontroller deactivates the relay at t = 0.
 * (c) $v_o(0+)$: voltage to be supported by the output pin of the microcontroller at $t = 0^+$. Has the
   problem discussed in section 2 been solved?
 
+    > As the time point we care the most about is $t = 0^+$, we can find the voltage to be supported by the
+    > output pin by using the initial value theorem.
+    >
+    > $$
+    > \begin{aligned}
+    >     v_o(0^+) &= \lim_{t → 0^+} v_o(t) = \lim_{s → ∞} sV_o(s) \\
+    >     &= \lim_{s→ ∞} s \left(
+    >         \frac{v_C(0^-)}{s}
+    >         + \frac{v_C(0^-) + sLi_L(0^-)}{s\left(1 + sRC_p + s^2LC_p\right)}
+    >     \right) \\
+    >     &= v_C(0^-)
+    > \end{aligned}
+    > $$
+    >
+    > In this case, the voltage to be supported by the output pin is the same as the initial voltage on the
+    > capacitor, unlike the previous scenario where the voltage was unbounded. This means that the power spike
+    > problem has been solved by adding the capacitor in parallel with the relay. Instead of an unbounded
+    > spike, the voltage will decrease and oscillate as it approaches 0.
+
 * (d) In view of the equation for the current flowing in the coil, what can be concluded about its behavior?
   What would you change in the circuit to avoid this effect?
