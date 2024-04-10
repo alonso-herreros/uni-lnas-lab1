@@ -141,6 +141,43 @@ Under these circumstances, calculate the voltage on the output pin in the Laplac
 $V_o(s)$, and in the time domain $v_o(t)$. Interpret the result and comment on whether you
 foresee any problems in the microcontroller.
 
+> By using the stabilized current $I_s$ obtained in the previous question, we can find an equivalent circuit
+> in the Laplace domain, adding a current source in parallel with the inductor to account for the initial
+> current flowing trough it, $i_L(0^-) = I_s$.
+>
+> ![Equivalent circuit in Laplace domain](img/fig_2.1.2.1.drawio.svg)
+>
+> Due to the high impedance state of the microcontroller pin acting as an open circuit, this can be further
+> simplified:
+>
+> ![Simplified equivalent circuit in Laplace domain](img/fig_2.1.2.2.drawio.svg)
+>
+> Using node analysis, we can find the voltage on the output pin, $v_o(t)$
+>
+> $$
+> \begin{aligned}
+>     && \frac{I_s}{s} &= \frac{0-v_o(s)}{sL} &⟹ \\
+>     &⟹& v_o(s) &= -I_s L \\
+>     &&& = -120 ⋅ 10^{-3} \text{ [V]}
+> \end{aligned}
+> $$
+>
+> From here, using the inverse Laplace transform, we can find the time domain expression for the voltage on
+> the output pin, $v_o(t)$
+>
+> $$
+> \begin{aligned}
+>     v_o(t) &= \mathcal{L}^{-1} \{-I_s L\} \\
+>     &= -I_s L δ(t) \\
+>     &= -120 ⋅ 10^{-3} δ(t) \text{ [V]}
+> \end{aligned}
+> $$
+>
+> This delta function in our time domain expression suggests that there will be an unbound voltage spike in
+> the opposite direction as soon as the switch is opened. This unbound voltage could potentially damage the
+> controller. A capacitor may be added in parallel with the relay in order to limit the effect of this sudden
+> (high-frequency change).
+
 ### Question 3
 
 To avoid the possible problems mentioned in the previous point, a capacitor is connected
