@@ -179,10 +179,20 @@ foresee any problems in the microcontroller.
 > \end{aligned}
 > $$
 >
-> This delta function in our time domain expression suggests that there will be an unbound voltage spike in
-> the opposite direction as soon as the switch is opened. This unbound voltage could potentially damage the
-> controller. A capacitor may be added in parallel with the relay in order to limit the effect of this sudden
-> (high-frequency change).
+> This delta function in our time domain expression tells us that there will be an unbound voltage spike in
+> the opposite direction as soon as the switch is opened. The initial value theorem proves this.
+>
+> $$
+> \begin{aligned}
+>     v_o(0^+) &= \lim_{t → 0^+} v_o(t) = \lim_{s → ∞} sV_o(s) \\
+>     &= \lim_{s → ∞} -s I_s L \\
+>     &= -∞ \text{ [V]}
+> \end{aligned}
+> $$
+>
+> This unbound
+> voltage could potentially damage the controller. A capacitor may be added in parallel with the relay in
+> order to limit the effect of this sudden (high-frequency change).
 
 ### Question 3
 
