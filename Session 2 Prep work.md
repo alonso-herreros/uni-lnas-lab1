@@ -232,6 +232,19 @@ has been closed for a long time before opening it at instant $t = 0$, determine:
     > $$
 
 * (b) $V_o(s)$: voltage on the microcontroller output pin in the Laplace domain for $t > 0$.
+
+    > We can find the voltage in the Laplace domain by using the current found in the previous question and
+    > the same equivalent circuit.
+    >
+    > $$
+    > \begin{aligned}
+    >     V_o(s) &= 0 + \frac{v_C(0^-)}{s} + \frac{I_L(s)}{sC_p} \\
+    >     &= \frac{v_C(0^-)}{s} + \frac{v_C(0^-) + sLi_L(0^-)}{s\left(1 + sRC_p + s^2LC_p\right)} \\
+    >     &= \frac{6}{s} + \frac{6 + 0.12 s}{s\left(1 + 0.01 s + 0.0002 s^2\right)} \\
+    >     % &= \frac{12 + 0.18 s + 0.0012 s^2}{s\left(1 + 0.01 s + 0.0002 s^2\right)} \\
+    > \end{aligned}
+    > $$
+
 * (c) $v_o(0+)$: voltage to be supported by the output pin of the microcontroller at $t = 0^+$. Has the
   problem discussed in section 2 been solved?
 
