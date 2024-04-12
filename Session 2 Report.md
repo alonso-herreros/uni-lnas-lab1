@@ -1,4 +1,4 @@
----
+﻿---
 title: LNAS - Lab 1 S2 Report
 ---
 
@@ -118,10 +118,20 @@ Now place the capacitor Cp=200 µF in parallel with the relay coil. When the rel
 * What would happen if the relay only activated once more than 1% of the current flowed through it instead of
   80%?
 
-<!-- TODO: Insert the screenshot(s) here and, optionally, the link(s). -->
-
-<!-- TODO: Insert here the explanation of what is observed in the screenshot and the reasoning of -->
-your answer.
+> The maximum absolute value measured at the output of the microcontroller was now -4.087 V, a much more
+> manageable value for the microcontroller.
+>
+> The relay was deactivated after 300.1 ms, at which point the current flowing through the coil was a stable
+> 120 mA. The relay took approximately 24 ms to deactivate, a much longer time than before, but the
+> microcontroller was saved from the high voltage spike.
+>
+> If the relay could be activated with only 1% of the current flowing through it, it would also take longer to
+> deactivate. However, adding the capacitor would be less of a problem during activation.
+>
+> ![alt text](img/fig_2.2.6.1.png)
+> <p class="caption center">
+>     Falstad Link: <a href="https://tinyurl.com/24trle45">https://tinyurl.com/24trle45</a>
+> </p>
 
 ## 7. Effect of the capacitor on relay activation
 After placing the capacitor Cp, has the relay activation process also been affected?
