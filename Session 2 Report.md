@@ -156,10 +156,25 @@ value of 200 µF for the capacitor Cp the following values ​​are chosen:
 1. 20 µF
 2. 800 µF
 
-<!-- TODO: Insert the screenshot(s) here and, optionally, the link(s). -->
-
-<!-- TODO: Insert here the explanation of what is observed in the screenshot and the reasoning of -->
-your answer.
+> At 200 µF, the relay deactivation process slow and slightly oscillating
+> ![alt text](img/fig_2.2.8.1.png)
+>
+> At 20 µF, the relay deactivation is much faster, taking only 6.6 ms, but the oscillations are more
+> pronounced. Values even lower could make the relay activate again after deactivation, if the current
+> oscillations are too high.
+>
+> ![alt text](img/fig_2.2.8.2.png)
+> <p class="caption center">
+>     Falstad Link: <a href="https://tinyurl.com/29uv8n5u">https://tinyurl.com/29uv8n5u</a>
+> </p>
+>
+> At 800 µF, the relay deactivation is much slower, taking approximately 65.4 ms, but there is almost no
+> oscillation.
+>
+> ![alt text](img/fig_2.2.8.3.png)
+> <p class="caption center">
+>     Falstad Link: <a href="https://tinyurl.com/25xa6r7h">htps://tinyurl.com/25xa6r7h</a>
+> </p>
 
 ## 9. Alternatives
 There are other better solutions to discharge in a controlled way the relay coil.
