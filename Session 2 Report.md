@@ -1,4 +1,4 @@
-﻿---
+---
 title: LNAS - Lab 1 S2 Report
 ---
 
@@ -94,9 +94,20 @@ Now we study the deactivation of the relay. Measure the time it takes for the LE
 the relay to deactivate) from the moment the switch is opened. What maximum voltage in absolute value is
 measured at the output of the microcontroller? Explain what you observed.
 
-
-<!-- TODO: Insert here the explanation of what is observed in the screenshot and the reasoning of -->
-your answer.
+> The relay was switched off after a very long time, in steady state. The relay turned off immediately, as
+> shown in the previous work. As shown in the scope graph, the current fall is instantaneous.
+>
+> ![alt text](img/fig_2.2.5.1.png)
+> <p class="caption center">
+>    Falstad Link: <a href="https://tinyurl.com/2xny4qtl">https://tinyurl.com/2xny4qtl</a>
+> </p>
+>
+> As predicted in the preparatory work, there was an instantaneous unbounded voltage spike in the opposite
+> direction. Here is a measurement of the maximum absolute value of the voltage at the output of the
+> microcontroller. The voltmenter reported a magnitude of 24 kV, an alarmingly high value for the
+> microcontroller.
+>
+> ![alt text](img/fig_2.2.5.2.png)
 
 ## 6. Effect of the capacitor in the deactivation of the relay
 Now place the capacitor Cp=200 µF in parallel with the relay coil. When the relay is turned off:
