@@ -61,10 +61,16 @@ time? Relate the result with what was seen in the preparatory work. [2%]
 When the relay is activated, to what value does the voltage at the output pin $v_o(t)$? Justify theoretically
 the result obtained.
 
-<!-- TODO: Insert the screenshot(s) here and, optionally, the link(s). -->
-
-<!-- TODO: Insert here the explanation of what is observed in the screenshot and the reasoning of -->
-your answer.
+> The voltage at the output pin $v_o(t)$ tends to 6 V, as expected from the previous work. This is because,
+> after a long time, the relay's inductor behaves as a short circuit, the two remainig reisistors act as a
+> voltage divider, with the measured voltage at the output ping being in the middle of both 50 Ω resistors.
+> As a result, the generator voltage of 12 V is divided in half, giving us 6 V.
+>
+> ![alt text](img/fig_2.2.2.1.png)
+>
+> <p class="caption center">
+> Falstad Link: <a href="https://tinyurl.com/249rqayr">https://tinyurl.com/249rqayr</a>
+> </p>
 
 ## 4. Relay activation time
 Use oscilloscopes (scopes) to measure the time it takes for the relay to activate from the time the switch is
