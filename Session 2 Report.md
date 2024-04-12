@@ -138,10 +138,16 @@ After placing the capacitor Cp, has the relay activation process also been affec
 
 What is the time it now takes for the relay to energize?
 
-<!-- TODO: Insert the screenshot(s) here and, optionally, the link(s). -->
-
-<!-- TODO: Insert here the explanation of what is observed in the screenshot and the reasoning of -->
-your answer.
+> The activation process has been affected as well. The voltage at the output rises slowly with a slight
+> oscillation, and the current rises more slowly.
+>
+> The relay activation takes longer now, approximately 23.4 ms, about 45% longer than before. This is
+> expected, as the capacitor must be charged before the current is stable.
+>
+> ![alt text](img/fig_2.2.7.1.png)
+> <p class="caption center">
+>     Falstad Link: <a href="https://tinyurl.com/259nenl9">https://tinyurl.com/259nenl9</a>
+> </p>
 
 ## 8. Effect of capacitor capacity on relay activation/deactivation
 Investigate and justify (especially in the relay deactivation process) what happens when instead of choosing a
