@@ -79,17 +79,21 @@ What is the current flowing through the coil at the moment when the relay switch
 data given in the previous work? NOTE: It is important to make a good selection of the time scale to take this
 measurement.
 
-<!-- TODO: Insert the screenshot(s) here and, optionally, the link(s). -->
-
-<!-- TODO: Insert here the explanation of what is observed in the screenshot and the reasoning of -->
-your answer.
+> As expected from the previous work, the relay turns on after approximately 16.1 ms. At this moment, the
+> current flowing through the coil is approximately 96 mA, which is exactly 80% of the stationary current
+> (120 mA).
+>
+> ![alt text](img/fig_2.2.4.1.png)
+>
+> <p class="caption center">
+> Falstad Link: <a href="https://tinyurl.com/2xhwqm52">https://tinyurl.com/2xhwqm52</a>
+> </p>
 
 ## 5. Deactivation time of the relay
 Now we study the deactivation of the relay. Measure the time it takes for the LED to turn off (that is, for
 the relay to deactivate) from the moment the switch is opened. What maximum voltage in absolute value is
 measured at the output of the microcontroller? Explain what you observed.
 
-<!-- TODO: Insert the screenshot(s) here and, optionally, the link(s). -->
 
 <!-- TODO: Insert here the explanation of what is observed in the screenshot and the reasoning of -->
 your answer.
