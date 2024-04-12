@@ -181,10 +181,25 @@ There are other better solutions to discharge in a controlled way the relay coil
 Explore with the simulator the following alternatives:
 
 1. Add a resistor in series with the capacitor Cp.
+
+    > By adding a resistor with the correct value, the relay deactivation process becomes much more damped.
+    > This was tested using the 20 µF capacitor, and the relay deactivation took approximately 5.1 ms without
+    > the oscillations seen in the previous question.
+    >
+    > ![alt text](img/fig_2.2.9.1.png)
+    > <p class="caption center">
+    >     Falstad Link: <a href="https://tinyurl.com/28zz3usv">https://tinyurl.com/28zz3usv</a>
+    > </p>
+
 2. Replace the capacitor with a diode. The diode is a nonlinear element, but its behavior can be linearized
    modeling the diode as a short when forward biased, and as an open when reverse biased.
 
-<!-- TODO: Insert the screenshot(s) here and, optionally, the link(s). -->
-
-<!-- TODO: Insert here the explanation of what is observed in the screenshot and the reasoning of -->
-your answer.
+    > By replacing the capacitor with a diode, the reverse voltage spike is eliminated, and the
+    > microcontroller is protected. The diode doesn't receive much current, but it could be protected with a
+    > resistor in series if necessary. The deactivation process was slower though, and it took approximately
+    > 26 ms.
+    >
+    > ![alt text](img/fig_2.2.9.2.png)
+    > <p class="caption center">
+    >     Falstad Link: <a href="https://tinyurl.com/2dfmnr7t">https://tinyurl.com/2dfmnr7t</a>
+    > </p>
