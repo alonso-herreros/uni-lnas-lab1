@@ -28,8 +28,8 @@ studied in the preparatory work is used to activate/deactivate a led. From this 
   what the ideal impedance of an ammeter would be taking into account that its objective is to measure current
   without disturbing the circuit.
 * Add a voltmeter to measure the voltage at the output pin of the microcontroller (the connector one on the
-  right of the switch, voltage vo(t) in the preparatory work). Comment what would be the ideal impedance of a
-  voltmeter considering that its purpose is to measure voltage without disturbing the circuit.
+  right of the switch, voltage $v_o(t)$ in the preparatory work). Comment what would be the ideal impedance of
+  a voltmeter considering that its purpose is to measure voltage without disturbing the circuit.
 
 > The ideal impedance of the ammeter would be zero, acting as a simple wire that reports the current flowing
 > through it.
@@ -58,8 +58,8 @@ time? Relate the result with what was seen in the preparatory work. [2%]
 > </p>
 
 ## 3. Stationary voltage at the output of the microcontroller
-When the relay is activated, to what value does the voltage at the output pin vO(t)? Justify theoretically the
-result obtained.
+When the relay is activated, to what value does the voltage at the output pin $v_o(t)$? Justify theoretically
+the result obtained.
 
 <!-- TODO: Insert the screenshot(s) here and, optionally, the link(s). -->
 
@@ -67,10 +67,11 @@ result obtained.
 your answer.
 
 ## 4. Relay activation time
-Use oscilloscopes (scopes) to measure the time it takes for the relay to activate from the time the switch is closed. That is, the time from the moment the relay is powered by the microcontroller until the LED turns on.
-What is the current flowing through the coil at the moment when the relay switches? Does it coincide with the data given in the previous work?
-NOTE: It is important to make a good selection of the time scale to take this measurement.
-[5%]
+Use oscilloscopes (scopes) to measure the time it takes for the relay to activate from the time the switch is
+closed. That is, the time from the moment the relay is powered by the microcontroller until the LED turns on.
+What is the current flowing through the coil at the moment when the relay switches? Does it coincide with the
+data given in the previous work? NOTE: It is important to make a good selection of the time scale to take this
+measurement.
 
 <!-- TODO: Insert the screenshot(s) here and, optionally, the link(s). -->
 
@@ -78,10 +79,9 @@ NOTE: It is important to make a good selection of the time scale to take this me
 your answer.
 
 ## 5. Deactivation time of the relay
-Now we study the deactivation of the relay. Measure the time it takes for the LED to turn off (that is, for the relay to deactivate) from the moment the switch is opened.
-What maximum voltage in absolute value is measured at the output of the microcontroller?
-Explain what you observed.
-[5%]
+Now we study the deactivation of the relay. Measure the time it takes for the LED to turn off (that is, for
+the relay to deactivate) from the moment the switch is opened. What maximum voltage in absolute value is
+measured at the output of the microcontroller? Explain what you observed.
 
 <!-- TODO: Insert the screenshot(s) here and, optionally, the link(s). -->
 
@@ -90,10 +90,12 @@ your answer.
 
 ## 6. Effect of the capacitor in the deactivation of the relay
 Now place the capacitor Cp=200 µF in parallel with the relay coil. When the relay is turned off:
+
 * What is now the maximum absolute value of voltage at the output of the microcontroller?
-* How long does it now take for the relay to deactivate from the time the switch is opened (i.e., how long does it take for the LED to turn off)?
-* What would happen if the relay only activated once more than 1% of the current flowed through it instead of 80%?
-[5%]
+* How long does it now take for the relay to deactivate from the time the switch is opened (i.e., how long
+  does it take for the LED to turn off)?
+* What would happen if the relay only activated once more than 1% of the current flowed through it instead of
+  80%?
 
 <!-- TODO: Insert the screenshot(s) here and, optionally, the link(s). -->
 
@@ -102,8 +104,8 @@ your answer.
 
 ## 7. Effect of the capacitor on relay activation
 After placing the capacitor Cp, has the relay activation process also been affected?
+
 What is the time it now takes for the relay to energize?
-[5%]
 
 <!-- TODO: Insert the screenshot(s) here and, optionally, the link(s). -->
 
@@ -111,23 +113,24 @@ What is the time it now takes for the relay to energize?
 your answer.
 
 ## 8. Effect of capacitor capacity on relay activation/deactivation
-Investigate and justify (especially in the relay deactivation process) what happens
-when instead of choosing a value of 200 µF for the capacitor Cp the following values ​​are chosen:
+Investigate and justify (especially in the relay deactivation process) what happens when instead of choosing a
+value of 200 µF for the capacitor Cp the following values ​​are chosen:
+
 1. 20 µF
 2. 800 µF
-[5%]
 
 <!-- TODO: Insert the screenshot(s) here and, optionally, the link(s). -->
 
 <!-- TODO: Insert here the explanation of what is observed in the screenshot and the reasoning of -->
 your answer.
 
-9. Alternatives.
+## 9. Alternatives
 There are other better solutions to discharge in a controlled way the relay coil.
 Explore with the simulator the following alternatives:
+
 1. Add a resistor in series with the capacitor Cp.
-2. Replace the capacitor with a diode. The diode is a nonlinear element, but its behavior can be linearized modeling the diode as a short when forward biased, and as an open when reverse biased.
-[EXTRA%]
+2. Replace the capacitor with a diode. The diode is a nonlinear element, but its behavior can be linearized
+   modeling the diode as a short when forward biased, and as an open when reverse biased.
 
 <!-- TODO: Insert the screenshot(s) here and, optionally, the link(s). -->
 
